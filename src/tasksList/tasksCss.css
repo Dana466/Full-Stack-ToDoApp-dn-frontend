@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+#light .title span{
+  color: #23262C;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info .vector-light {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 52px;
+  margin-right: 80px;
+}
+
+ .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-right: 80px;
+    margin-left: 4%;
+ }
+ 
+ .task-header .completed-count {
+    font-size: 16px;
+    color: #8C8E93;
+    width: 91px;
+    height: 21px;
+font-weight: 400;
+size: 14px;
+line-height: 21px;
+margin-right: auto;
+ }
+ .hide-completed {
+   width: 215 px;
+   height: 48px ;
+   padding: 12px 24px;
+   gap: 10px;
+   background-color: var(--hide-btn);
+   color: #8C8E93;
+   border: none;
+   border-radius: 9px;
+   cursor: pointer;
+   display: flex;
+  align-items: center;
+
+}
+ .fa-solid fa-eye-slash{
+   width: 20px;
+   height: 15.83px;
+   color: #8C8E93;
+   margin-left: 24px;
+   margin-top: 16.09px;
+   margin-right: 4.09 px;
+   padding-top: 12px;
+ }
+ .task-header .eye {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ /*.eye {
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: 422.5 px;
+   margin-right: 422.5 px;
+ }*/
+
+/*.task-list{
+width: 1080px;
+height: 380px;
+gap: 12px;
+
+
+}*/
+.task-list{
+  width: 100%;
+  height: 380px;
+  gap: 12px;
+  margin-left:1% ;
+}
+
+
+
+ .todo {
+    display: flex;
+    margin-bottom: 20px;
+  
+ }
+ .completion{
+   width: 24px;
+   height: 24px;
+   color: #FFFFFF;
+
+
+ }
+
+ .completion .check{ 
+  background-color: #29ABE2;
+background: #29ABE2;
+fill: backgound #29ABE2;
+border-color: #29ABE2;
+
+}
+
+
+
+ .txt, .line_through {
+    flex-grow: 1;
+    margin: 0 10px;
+    font-weight: 400px;
+    size: 16px;
+    line-height: 24px;
+    color: var(--details);
+   width: 408 px;
+    
+
+  }
+
+  .line_through{
+   text-decoration: line-through;
+   color: var(--details);
+   
+       }
+
+ .icons{
+   width: 30px;
+   height: 33.26;
+    position: absolute;
+    color: #8C8E93;
+    display: flex;
+    gap: 0.05 rem;
+    transform: translateY(-50%);
+    align-items: end;
+    justify-content: end;
+    right: 20px;
+    padding-right: 122px;
+    
+    }
+    .icon{
+      width: 30px;
+      height: 33.26px;
+      color: #8C8E93;
+    cursor: pointer;
+    font-size: 20px;
+        
+    }
+  
+    :root{
+      --main-background:#23262C;
+      --title-color:#FFFFFF;
+  --details:#F4F6FA;
+  --input-btn: #2E3239;
+  --hide-btn:#2E3239;
+  
+    }
+    
+    #light{
+      background-color:#F4F6FA ;
+   --main-background: #F4F6FA;
+   --details:#23262C;
+   --input-btn:#DADADA;
+   --title-color:#23262C;
+   --hide-btn:#B4B4B4;
+   
+    
+    }
+
+    @media (max-width: 375px) {
+      .container {
+        margin-top: 69px;
+        margin-left: 30px;
+        margin-right: 31px;
+        margin-bottom: 70px;
+      }
+    }
+    @media (max-width: 375px) {
+      .task-header {
+        padding-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px; 
+      }
+    
+    
+      .hide-completed {
+        top: 189px;
+        right: 30px;
+        margin-left: 0px;
+      }
+.task-list{
+  width: 314px;
+  height: 362px;
+  font-size: 14px;
+}
+
+    }
+    @media  (max-width: 775px) {
+      
+      .add-note button.addbtn {
+        display: none; 
+      }
+      .icon{
+        display: none;
+      }
+    
+    }
+    
+    .add-note{
+      width: 85%;
+    /* width: 1120px;*/
+height: 80px;
+border-radius: 10px;
+padding: 16px, 30px, 16px, 30px;
+gap: 4px;
+justify-content: center;
+align-items: center;
+background-color: var(--input-btn);
+display: flex;
+flex: none;
+   order: 1;
+   flex-grow: 0;
+   border: none;
+   margin-left: 4%;
+   margin-bottom: 67px;
+   margin-top: 665 px;
+   margin-right: 4%;
+
+
+    }
+    .add-note input {
+      flex: 1;
+      /*width: 895px;*/
+      width: 85%;
+      height: 24px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--details);
+      opacity: 0.5;
+      flex-grow: 1;
+      padding: 16px 30px;
+      gap: 4px;
+      border: none;
+      background-color: var(--input-btn);
+      border-radius: 10px;
+      margin-left: 30px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      margin-right: 195 px;
+   
+   }
+   .add-note button.addbtn {
+   /* width: 161px;*/
+   width: 12%;
+    height: 48px;
+    background: #F4F6FA;
+    padding: 12px 24px;
+    gap: 10px;
+    border-radius: 9px;
+    margin-left: 4px;
+    margin-right: 30px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  
+   .add-note button p {
+      width: 113px;
+height: 24px;
+margin-left: 24px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #2E3239;
+display: flex;
+flex: none;
+order: 1;
+flex-grow: 0;
+   }
